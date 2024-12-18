@@ -4,6 +4,24 @@ import { FaSearch } from "react-icons/fa";
 import Button from "../components/button";
 import Container from "../components/Container";
 import Section from "../components/section";
+import { heroCategory } from "../constants";
+import { motion } from "framer-motion";
+
+const catVariant = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
 
 const Hero = () => {
   return (
@@ -11,9 +29,14 @@ const Hero = () => {
       <div className="absolute -z-10 w-full h-full top-0 left-0 bg-overlay opacity-[0.85]"></div>
 
       <Container>
-        <h1 className="text-6xl text-secondary font-bold capitalize text-center leading-tight w-1/2 mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2, type: "spring", stiffness: 200 }}
+          className="text-6xl text-secondary font-bold capitalize text-center leading-tight w-1/2 mx-auto"
+        >
           find anything around <span className="text-accent">you</span>
-        </h1>
+        </motion.h1>
 
         <div className="p-[15px] w-3/5 mx-auto bg-secondary rounded-lg mt-10">
           <form
@@ -54,66 +77,26 @@ const Hero = () => {
           </form>
         </div>
 
-        <div className="flex items-center justify-center gap-2 mt-10">
-          <a
-            href="/vehicles"
-            className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
-          >
-            <div className="w-[45px] h-[45px]">
-              <img src="images/vehicle_icon.png" alt="" className="w-full" />
-            </div>
-            <div className="capitalize font-semibold">vehicles</div>
-          </a>
-          <a
-            href="/fashion"
-            className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
-          >
-            <div className="w-[45px] h-[45px]">
-              <img src="images/fashion_icon.png" alt="" className="w-full" />
-            </div>
-            <div className="capitalize font-semibold">fashions</div>
-          </a>
-          <a
-            href="/jobs"
-            className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
-          >
-            <div className="w-[45px] h-[45px]">
-              <img src="images/jobs-1.png" alt="" className="w-full" />
-            </div>
-            <div className="capitalize font-semibold">Jobs</div>
-          </a>
-          <a
-            href="/estate"
-            className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
-          >
-            <div className="w-[45px] h-[45px]">
-              <img
-                src="images/real_estate_icon.png"
-                alt=""
-                className="w-full"
-              />
-            </div>
-            <div className="capitalize font-semibold">real estate</div>
-          </a>
-          <a
-            href="/services"
-            className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
-          >
-            <div className="w-[45px] h-[45px]">
-              <img src="images/services_icon.png" alt="" className="w-full" />
-            </div>
-            <div className="capitalize font-semibold">services</div>
-          </a>
-          <a
-            href="/pets"
-            className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
-          >
-            <div className="w-[45px] h-[45px]">
-              <img src="images/pets_icon.png" alt="" className="w-full" />
-            </div>
-            <div className="capitalize font-semibold">pets</div>
-          </a>
-        </div>
+        <motion.div
+          variants={catVariant}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center justify-center gap-2 mt-10"
+        >
+          {heroCategory.map(({ id, img, name, path }) => (
+            <motion.a
+              variants={catVariant}
+              key={id}
+              href={path}
+              className="p-[10px] border border-white w-[100px] h-[90px] text-sm text-white aspect-square rounded-md flex flex-col justify-evenly items-center transition-colors duration-300 hover:border-accent"
+            >
+              <div className="w-[45px] h-[45px]">
+                <img src={img} alt="" className="w-full" />
+              </div>
+              <div className="capitalize font-semibold">{name}</div>
+            </motion.a>
+          ))}
+        </motion.div>
       </Container>
     </Section>
   );

@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#537cd9',
+        secondary: '#fdfdfe',
+        accent: '#ffb300',
+        neutral: '#000',
+        btn1: '#ffb300',
+        btn2: '#537cd9',
+        link1bg: '#D5E3E',
+        link1: '#374B5C',
+      },
       fontSize: {
         xs: '0.75rem',
         sm: '0.875rem',

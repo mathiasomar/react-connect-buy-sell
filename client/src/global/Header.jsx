@@ -2,10 +2,24 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FaRegUserCircle } from "react-icons/fa";
 import Container from "../components/Container";
 import Button from "../components/button";
+import { useState } from "react";
 
 const Header = () => {
+  const [headerBg, setHeaderBg] = useState(false);
+
+  window.onscroll = () => {
+    if (window.scrollY > 100) {
+      setHeaderBg(true);
+    } else {
+      setHeaderBg(false);
+    }
+  };
   return (
-    <header className="w-screen h-[90px] bg-transparent fixed z-50 top-0 left-0 bg-black">
+    <header
+      className={`w-screen h-[90px] ${
+        headerBg ? "bg-neutral" : "bg-transparent"
+      } fixed z-50 top-0 left-0 transition-colors duration-500`}
+    >
       <Container className="py-4 flex items-center justify-between">
         <a href="/" className="font-bold">
           <img src="images/logo.png" alt="" className="w-[112.7px]" />

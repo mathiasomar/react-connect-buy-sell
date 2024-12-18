@@ -1,10 +1,15 @@
 import { useEffect } from "react";
+import Hero from "../sections/Hero";
 
 const Home = () => {
   useEffect(() => {
     document.title = "Connect Home";
   }, []);
-  return <div></div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;

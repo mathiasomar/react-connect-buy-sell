@@ -15,6 +15,9 @@ export default {
         btn2: '#537cd9',
         link1bg: '#D5E3E',
         link1: '#374B5C',
+        overlay: '#374b5c',
+        bgAccent: "#d5e3ee",
+        textAccent: "#374b5c"
       },
       fontSize: {
         xs: '0.75rem',
@@ -26,6 +29,7 @@ export default {
         '3xl': '1.875rem',
         '4xl': '2.25rem',
         '5xl': '3rem',
+        '6xl': '4.25rem'
       }
     },
   },

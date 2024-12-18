@@ -36,3 +36,48 @@ export const heroCategory = [
     path: "/pets",
   },
 ];
+
+export const discCategory = [
+  {
+    id: 1,
+    name: "devices",
+    img: "images/category_1.jpg",
+    path: "/cat1",
+  },
+  {
+    id: 2,
+    name: "cars",
+    img: "images/category_2.jpg",
+    path: "/cat2",
+  },
+  {
+    id: 3,
+    name: "pets",
+    img: "images/category_3.jpg",
+    path: "/cat3",
+  },
+  {
+    id: 4,
+    name: "real estate",
+    img: "images/category_3-1.jpg",
+    path: "/cat4",
+  },
+  {
+    id: 5,
+    name: "community",
+    img: "images/category_3-2.jpg",
+    path: "/cat5",
+  },
+  {
+    id: 6,
+    name: "for kids",
+    img: "images/category_3-3.jpg",
+    path: "/cat6",
+  },
+  {
+    id: 7,
+    name: "gardening",
+    img: "images/category_3-4.jpg",
+    path: "/cat7",
+  },
+];

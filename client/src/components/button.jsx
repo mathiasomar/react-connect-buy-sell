@@ -4,7 +4,7 @@ const Button = ({ children, className, type }) => {
   return (
     <button
       className={twMerge(
-        `txt-xl px-[30px] py-2 rounded-md relative overflow-hidden ${
+        `txt-xl px-[30px] py-4 rounded-md relative overflow-hidden ${
           type == "one" ? "bg-btn1 text-neutral" : "bg-btn2 text-secondary"
         }`,
         className

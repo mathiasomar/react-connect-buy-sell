@@ -28,7 +28,7 @@ const Hero = () => {
     <Section className="z-20 bg-[url('images/mosaic-big.jpg')] bg-cover bg-center relative">
       <div className="absolute -z-10 w-full h-full top-0 left-0 bg-overlay opacity-[0.85]"></div>
 
-      <Container>
+      <Container className="mt-20">
         <motion.h1
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}

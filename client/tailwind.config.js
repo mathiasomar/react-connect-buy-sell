@@ -17,7 +17,8 @@ export default {
         link1: '#374B5C',
         overlay: '#374b5c',
         bgAccent: "#d5e3ee",
-        textAccent: "#374b5c"
+        textAccent: "#374b5c",
+        sectionBg: "#f8f1fd",
       },
       fontSize: {
         xs: '0.75rem',

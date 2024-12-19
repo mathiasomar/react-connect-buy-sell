@@ -1,11 +1,10 @@
 import { twMerge } from "tailwind-merge";
 
-const Section = ({ children, className, ref }) => {
+const Section = ({ children, className }) => {
   return (
     <section
-      ref={ref}
       className={twMerge(
-        "w-full min-h-screen pt-[50px] even:bg-sectionBg",
+        "w-full min-h-screen pt-[50px] pb-4 even:bg-sectionBg overflow-hidden",
         className
       )}
     >

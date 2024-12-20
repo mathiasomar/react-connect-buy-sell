@@ -4,13 +4,8 @@ import Title from "../components/title";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { discCategory } from "../constants";
-import { useNavigate } from "react-router-dom";
 
 const Features = () => {
-  const navigate = useNavigate();
-  const handleClick = (path) => {
-    navigate(path);
-  };
   return (
     <Section>
       <Title topText="Check out our features" bottomText="Features" />
@@ -25,7 +20,7 @@ const Features = () => {
             heading={subText}
           >
             <ExampleContent
-              onclick={() => handleClick(path)}
+              path={path}
               add={addText}
               description={description}
             />
@@ -115,17 +110,17 @@ const OverlayCopy = ({ subheading, heading }) => {
   );
 };
 
-const ExampleContent = ({ handleClick, add, description }) => (
+const ExampleContent = ({ path, add, description }) => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">{add}</h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-neutral md:text-2xl">{description}</p>
-      <button
-        onClick={handleClick}
+      <a
+        href={path}
         className="w-full rounded bg-bgAccent px-9 py-4 text-xl font-semibold text-textAccent transition-colors hover:bg-neutral hover:text-secondary md:w-fit"
       >
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </a>
     </div>
   </div>
 );

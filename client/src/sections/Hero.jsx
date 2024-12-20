@@ -1,7 +1,6 @@
 import { RiMapPin2Line } from "react-icons/ri";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { FaSearch } from "react-icons/fa";
-import Button from "../components/button";
 import Container from "../components/Container";
 import Section from "../components/section";
 import { heroCategory } from "../constants";
@@ -70,9 +69,9 @@ const Hero = () => {
               </div>
             </div>
             <div className="w-[10%]">
-              <Button type="two" className="hover:shadow-2xl py-6">
+              <button className="txt-xl px-[30px] py-6 rounded-md relative overflow-hidden bg-btn2 text-secondary">
                 <FaSearch />
-              </Button>
+              </button>
             </div>
           </form>
         </div>

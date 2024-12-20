@@ -74,11 +74,8 @@ const Discover = () => {
             <div className="text-center text-secondary text-xl font-[800]">
               Didn&apos;t find the category you&apos;re looking for?
             </div>
-            <Button type="one">
-              <span className="capitalize">view all</span>
-              <span className="ml-4">
-                <AiOutlineArrowRight />
-              </span>
+            <Button type="one" icon={<AiOutlineArrowRight />}>
+              view all
             </Button>
           </motion.a>
         </motion.div>

@@ -101,11 +101,8 @@ const Header = () => {
             </a>
           </div>
 
-          <Button type="one">
-            <span className="capitalize">post your ad</span>
-            <span className="ml-4">
-              <AiOutlinePlus />
-            </span>
+          <Button type="one" icon={<AiOutlinePlus />}>
+            post your ad
           </Button>
         </div>
       </Container>

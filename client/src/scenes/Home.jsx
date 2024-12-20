@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Hero from "../sections/Hero";
 import Discover from "../sections/Discover";
+import Listing from "../sections/Listing";
 // import Features from "../sections/Features";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <Discover />
       {/* <Features /> */}
+      <Listing />
     </>
   );
 };

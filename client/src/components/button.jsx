@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-const Button = ({ children, className, type }) => {
+const Button = ({ children, className, type, icon }) => {
   return (
     <button
       className={twMerge(
@@ -11,7 +11,8 @@ const Button = ({ children, className, type }) => {
       )}
     >
       <div className="bg-transparent flex items-center justify-between">
-        {children}
+        <span className="capitalize">{children}</span>
+        <span className="ml-4">{icon}</span>
       </div>
     </button>
   );

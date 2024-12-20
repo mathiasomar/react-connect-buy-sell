@@ -4,7 +4,7 @@ const Section = ({ children, className }) => {
   return (
     <section
       className={twMerge(
-        "w-full min-h-screen pt-[50px] pb-4 even:bg-sectionBg overflow-hidden",
+        "w-full min-h-screen pt-[100px] pb-[3rem] even:bg-sectionBg overflow-hidden",
         className
       )}
     >

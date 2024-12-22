@@ -22,7 +22,7 @@ const Header = () => {
     >
       <Container className="py-4 flex items-center justify-between">
         <a href="/" className="font-bold">
-          <img src="images/logo.png" alt="" className="w-[112.7px]" />
+          <img src="images/logo.png" alt="" className="w-[112px]" />
         </a>
 
         <ul className="flex items-center gap-6">

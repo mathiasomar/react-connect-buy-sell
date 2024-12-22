@@ -13,12 +13,14 @@ export default {
         neutral: '#000',
         btn1: '#ffb300',
         btn2: '#537cd9',
-        link1bg: '#D5E3E',
-        link1: '#374B5C',
+        bgLink: '#D5E3EE',
+        linkText: '#374B5C',
         overlay: '#374b5c',
         bgAccent: "#d5e3ee",
         textAccent: "#374b5c",
         sectionBg: "#f8fafd",
+        bgLight: "#f2f4f8",
+        fadeText: "#73818C"
       },
       fontSize: {
         xs: '0.75rem',

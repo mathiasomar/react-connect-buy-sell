@@ -1,6 +1,10 @@
-const Title = ({ topText, bottomText }) => {
+const Title = ({ topText, bottomText, align = "center" }) => {
   return (
-    <div className="flex items-center justify-center flex-col w-1/2 mx-auto">
+    <div
+      className={`flex ${
+        align == "center" ? "items-center w-1/3" : "items-start w-full"
+      } justify-center flex-col mx-auto`}
+    >
       <div className="bg-blue-700 text-white capitalize font-semibold px-2 rounded-lg text-sm">
         {topText}
       </div>

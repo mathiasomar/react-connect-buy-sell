@@ -274,3 +274,77 @@ export const listing = [
     featured: false,
   },
 ];
+
+export const membership = [
+  {
+    id: 1,
+    plan: "Free",
+    price: "0.00",
+    listing: 5,
+    galleryImagesPerListing: 2,
+    featuredListing: 0,
+    businessHourNotAllowed: true,
+    enquiryFormNotAllowed: true,
+    membershipBadgeNotAllowed: true,
+  },
+  {
+    id: 2,
+    plan: "Weekly",
+    price: "1,280.00",
+    listing: 10,
+    galleryImagesPerListing: 5,
+    featuredListing: 5,
+    businessHourNotAllowed: false,
+    enquiryFormNotAllowed: false,
+    membershipBadgeNotAllowed: false,
+  },
+  {
+    id: 3,
+    plan: "Monthly",
+    price: "6,400.00",
+    listing: 20,
+    galleryImagesPerListing: 10,
+    featuredListing: 10,
+    businessHourNotAllowed: false,
+    enquiryFormNotAllowed: false,
+    membershipBadgeNotAllowed: false,
+  },
+  {
+    id: 4,
+    plan: "Yearly",
+    price: "12,800.00",
+    listing: 50,
+    galleryImagesPerListing: 20,
+    featuredListing: 20,
+    businessHourNotAllowed: false,
+    enquiryFormNotAllowed: false,
+    membershipBadgeNotAllowed: false,
+  },
+];
+
+export const team = [
+  {
+    id: 1,
+    name: "Wade Warren",
+    title: "Founder & CEO",
+    img: "images/media/tam11714911266.jpg",
+  },
+  {
+    id: 2,
+    name: "Wade Warren",
+    title: "Founder & CEO",
+    img: "images/media/tam21714911266.jpg",
+  },
+  {
+    id: 3,
+    name: "Wade Warren",
+    title: "Founder & CEO",
+    img: "images/media/tam31714913557.jpg",
+  },
+  {
+    id: 4,
+    name: "Wade Warren",
+    title: "Founder & CEO",
+    img: "images/media/tam41714913557.jpg",
+  },
+];

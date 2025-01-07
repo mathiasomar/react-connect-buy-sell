@@ -24,7 +24,7 @@ const catVariant = {
 
 const Hero = () => {
   return (
-    <Section className="z-20 bg-[url('images/mosaic-big.jpg')] bg-cover bg-center relative">
+    <Section className="h-screen z-20 bg-[url('images/mosaic-big.jpg')] bg-cover bg-center relative">
       <div className="absolute -z-10 w-full h-full top-0 left-0 bg-overlay opacity-[0.85]"></div>
 
       <Container className="mt-20">

@@ -1,8 +1,10 @@
+import { FaAngleDown } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FaRegUserCircle } from "react-icons/fa";
 import Container from "../components/Container";
 import Button from "../components/button";
 import { useState } from "react";
+import LinkCustom from "../components/link";
 
 const Header = () => {
   const [headerBg, setHeaderBg] = useState(false);
@@ -17,7 +19,7 @@ const Header = () => {
   return (
     <header
       className={`w-screen h-[90px] ${
-        headerBg ? "bg-neutral" : "bg-transparent"
+        headerBg ? "bg-neutral" : "header-bg"
       } fixed z-50 top-0 left-0 transition-colors duration-500`}
     >
       <Container className="py-4 flex items-center justify-between">
@@ -27,49 +29,83 @@ const Header = () => {
 
         <ul className="flex items-center gap-6">
           <li>
-            <a
-              href="/"
-              className="text-secondary capitalize ml-4 py-4 text-base font-semibold relative before:content-[''] before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:top-1/2 before:-translate-y-1/2 before:-left-10 before:transition-all before:ease-in-out before:duration-300 before:opacity-0 hover:before:-left-4 hover:before:opacity-100"
-            >
+            <LinkCustom path="/" type="main">
               Home
-            </a>
+            </LinkCustom>
           </li>
           <li>
-            <a
-              href="/listing"
-              className="text-secondary capitalize ml-4 py-4 text-base font-semibold relative before:content-[''] before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:top-1/2 before:-translate-y-1/2 before:-left-10 before:transition-all before:ease-in-out before:duration-300 before:opacity-0 hover:before:-left-4 hover:before:opacity-100"
-            >
+            <LinkCustom path="/about" type="main">
+              about
+            </LinkCustom>
+          </li>
+          <li>
+            <LinkCustom path="/listing" type="main">
               Listing
-            </a>
+            </LinkCustom>
           </li>
           <li>
-            <a
-              href="/featured"
-              className="text-secondary capitalize ml-4 py-4 text-base font-semibold relative before:content-[''] before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:top-1/2 before:-translate-y-1/2 before:-left-10 before:transition-all before:ease-in-out before:duration-300 before:opacity-0 hover:before:-left-4 hover:before:opacity-100"
-            >
-              Featured
-            </a>
+            <LinkCustom path="/membership" type="main">
+              membership
+            </LinkCustom>
+          </li>
+          <li className="relative cursor-pointer group">
+            <div className="flex items-center gap-2 py-4 text-base font-semibold text-secondary">
+              <span>Pages</span>
+              <FaAngleDown />
+            </div>
+
+            <ul className="absolute hidden group-hover:block border-b-8 border-primary text-left min-w-[220px] m-0 p-0 left-0 top-[100%] bg-white z-50 transition-transform duration-500">
+              <li className="block ml-0 leading-[24px] text-sm border-b border-bgAccent">
+                <a
+                  href="/blog"
+                  className="capitalize font-semibold block px-[30px] py-[10px] bg-white whitespace-nowrap text-[#333333] hover:bg-primary hover:text-secondary transition-colors duration-500"
+                >
+                  blog
+                </a>
+              </li>
+              <li className="block ml-0 leading-[24px] text-sm border-b border-bgAccent">
+                <a
+                  href="/privacy"
+                  className="capitalize font-semibold block px-[30px] py-[10px] bg-white whitespace-nowrap text-[#333333] hover:bg-primary hover:text-secondary transition-colors duration-500"
+                >
+                  privacy policy
+                </a>
+              </li>
+              <li className="block ml-0 leading-[24px] text-sm border-b border-bgAccent">
+                <a
+                  href="/terms"
+                  className="capitalize font-semibold block px-[30px] py-[10px] bg-white whitespace-nowrap text-[#333333] hover:bg-primary hover:text-secondary transition-colors duration-500"
+                >
+                  terms and conditions
+                </a>
+              </li>
+              <li className="block ml-0 leading-[24px] text-sm border-b border-bgAccent">
+                <a
+                  href="/faq"
+                  className="capitalize font-semibold block px-[30px] py-[10px] bg-white whitespace-nowrap text-[#333333] hover:bg-primary hover:text-secondary transition-colors duration-500"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li className="block ml-0 leading-[24px] text-sm">
+                <a
+                  href="/safety"
+                  className="capitalize font-semibold block px-[30px] py-[10px] bg-white whitespace-nowrap text-[#333333] hover:bg-primary hover:text-secondary transition-colors duration-500"
+                >
+                  safety information
+                </a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a
-              href="/about"
-              className="text-secondary capitalize ml-4 py-4 text-base font-semibold relative before:content-[''] before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:top-1/2 before:-translate-y-1/2 before:-left-10 before:transition-all before:ease-in-out before:duration-300 before:opacity-0 hover:before:-left-4 hover:before:opacity-100"
-            >
-              about us
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact"
-              className="text-secondary capitalize ml-4 py-4 text-base font-semibold relative before:content-[''] before:absolute before:w-[10px] before:h-[10px] before:bg-primary before:rounded-full before:top-1/2 before:-translate-y-1/2 before:-left-10 before:transition-all before:ease-in-out before:duration-300 before:opacity-0 hover:before:-left-4 hover:before:opacity-100"
-            >
-              contact us
-            </a>
+            <LinkCustom path="/contact" type="main">
+              contact
+            </LinkCustom>
           </li>
         </ul>
 
         <div className="flex items-center gap-4">
-          <div>
+          {/* <div>
             <select
               name=""
               id=""
@@ -78,7 +114,7 @@ const Header = () => {
               <option value="USD">USD</option>
               <option value="KES">KES</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
@@ -101,7 +137,7 @@ const Header = () => {
             </a>
           </div>
 
-          <Button type="one" icon={<AiOutlinePlus />}>
+          <Button type="one" icon={<AiOutlinePlus />} path="/post_ads">
             post your ad
           </Button>
         </div>

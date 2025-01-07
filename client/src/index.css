@@ -148,3 +148,27 @@ label {
 .custom-button-next:hover {
   @apply bg-primary text-white;
 }
+
+.posted {
+  @apply text-textColor1 font-[500];
+}
+
+.slider-img {
+  width: 100%;
+}
+
+.slider-img img {
+  width: 100%;
+  @apply object-cover;
+}
+
+.thumbs-slider {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.thumbs-slider img {
+  @apply w-full h-full object-cover;
+}

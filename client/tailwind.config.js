@@ -21,6 +21,7 @@ export default {
         textAccent: "#374b5c",
         sectionBg: "#f8fafd",
         bgLight: "#f2f4f8",
+        bgFade: "#E2E8F0",
         fadeText: "#73818C",
         pageBg: "#EEF7FF",
         textColor1: "#0F172A",
@@ -28,6 +29,7 @@ export default {
         textColor3: "#475569",
         textColor4: "#5E5E5E",
         textColor5: "#334155",
+        textColor6: "#F97316"
       },
       fontSize: {
         xs: '0.75rem',
